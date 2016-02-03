@@ -96,12 +96,6 @@ define(function (require) {
           type: 'json',
           advanced: true
         });
-        // always append custom label
-        this.params.push({
-          name: 'customLabel',
-          type: 'string',
-          write: _.noop
-        });
 
         this.params = new AggParams(this.params);
       }
