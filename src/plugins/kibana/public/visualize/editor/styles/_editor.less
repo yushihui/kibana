@@ -8,9 +8,19 @@
 
   // For the vis-editor sidebar nav
   .navbar-default .navbar-nav {
-    &> .active > a:before {
-      border: 7px solid transparent;
-      border-bottom-color: @vis-editor-navbar-current-tab-color;
+    &> .active > a {
+      border-bottom: 2px solid @kibanaGray2;
+      color: @kibanaGray1;
+      &:before {
+        display: none;
+      }
+    }
+    > li {
+      > a {
+        padding: 4px 0;
+        margin: 0 10px;
+        color: @kibanaGray2;
+      }
     }
 
     .danger {
@@ -79,6 +89,7 @@
     }
 
     nav {
+      min-height: 30px;
       border-radius: 0px;
     }
 
