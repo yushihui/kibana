@@ -37,8 +37,8 @@ module.exports = () => Joi.object({
     defaultRoute: Joi.string(),
     basePath: Joi.string().default('').allow('').regex(/(^$|^\/.*[^\/]$)/, `start with a slash, don't end with one`),
     ssl: Joi.object({
-      cert: Joi.string(),
-      key: Joi.string()
+      cert: Joi.string().default(fromRoot('test/dev_certs/server.crt')),
+      key: Joi.string().default(fromRoot('test/dev_certs/server.key'))
     }).default(),
     cors: Joi.when('$dev', {
       is: true,
