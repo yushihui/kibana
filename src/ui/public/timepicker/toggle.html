@@ -8,7 +8,8 @@
   </li>
 
   <li
-    ng-show="timefilter.refreshInterval.value > 0 || configTemplate.is('interval') || configTemplate.is('filter')">
+    ng-show="timefilter.refreshInterval.value > 0 || configTemplate.is('interval') || configTemplate.is('filter')"
+    class="to-body">
 
     <button ng-click="configTemplate.toggle('interval')"
     ng-class="{active: configTemplate.is('interval') }"
@@ -19,7 +20,7 @@
 
   </li>
 
-  <li>
+  <li class="to-body" >
     <button ng-class="{active: configTemplate.is('filter')}"
       ng-click="configTemplate.toggle('filter')"
       aria-haspopup="true"
