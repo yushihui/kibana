@@ -77,7 +77,6 @@
 
 # Set this to true to log all events, including system usage information and all requests.
 # logging.verbose: false
-
 # Set this to true to log all events, including system usage information and all requests.
 # logging.verbose: false
 # Set sharpview config server address
