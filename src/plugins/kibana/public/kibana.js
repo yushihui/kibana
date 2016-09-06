@@ -11,7 +11,7 @@ const chrome = require('ui/chrome');
 const routes = require('ui/routes');
 const modules = require('ui/modules');
 
-const kibanaLogoUrl = require('ui/images/kibana.svg');
+const kibanaLogoUrl = require('ui/images/logo.png');
 
 routes.enable();
 
