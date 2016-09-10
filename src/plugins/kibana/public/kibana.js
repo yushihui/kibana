@@ -3,6 +3,7 @@ require('plugins/kibana/visualize/index');
 require('plugins/kibana/dashboard/index');
 require('plugins/kibana/settings/index');
 require('plugins/kibana/doc/index');
+require('plugins/kibana/report/index');
 require('ui/timepicker');
 
 const moment = require('moment-timezone');
@@ -17,7 +18,7 @@ routes.enable();
 
 routes
 .otherwise({
-  redirectTo: `/${chrome.getInjected('kbnDefaultAppId', 'discover')}`
+  redirectTo: `/report`
 });
 
 chrome
@@ -25,7 +26,7 @@ chrome
   'logo': 'url(' + kibanaLogoUrl + ') left no-repeat',
   'smallLogo': 'url(' + kibanaLogoUrl + ') left no-repeat'
 })
-.setNavBackground('#222222')
+.setNavBackground('#39c')
 .setTabDefaults({
   resetWhenActive: true,
   lastUrlStore: window.sessionStore,
@@ -34,23 +35,24 @@ chrome
 .setTabs([
   {
     id: 'discover',
-    title: 'Discover'
+    title: '发现 '
   },
   {
     id: 'visualize',
-    title: 'Visualize',
+    title: '可视化',
     activeIndicatorColor: function () {
       return (String(this.lastUrl).indexOf('/visualize/step/') === 0) ? 'white' : '#656a76';
     }
   },
   {
     id: 'dashboard',
-    title: 'Dashboard'
+    title: '面板'
   },
   {
     id: 'settings',
-    title: 'Settings'
+    title: '其他配置'
   }
+
 ])
 .setRootController('kibana', function ($scope, $rootScope, courier, config) {
   function setDefaultTimezone() {
