@@ -27,6 +27,10 @@ module.exports = () => Joi.object({
     exclusive: Joi.boolean().default(false)
   }).default(),
 
+  sharpview: Joi.object({
+    configServer: Joi.string()
+  }).default(),
+
   server: Joi.object({
     host: Joi.string().hostname().default('0.0.0.0'),
     port: Joi.number().default(5601),

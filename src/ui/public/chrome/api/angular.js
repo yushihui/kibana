@@ -14,6 +14,7 @@ module.exports = function (chrome, internals) {
     .value('kbnVersion', internals.version)
     .value('buildNum', internals.buildNum)
     .value('buildSha', internals.buildSha)
+    .value('sv', internals.sharpview)
     .value('sessionId', Date.now())
     .value('esUrl', (function () {
       var a = document.createElement('a');

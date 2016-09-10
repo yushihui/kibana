@@ -71,4 +71,10 @@
   </config>
 
   <div class="application" ng-class="'tab-' + chrome.getActiveTabId('-none-') + ' ' + chrome.getApplicationClasses()" ng-view></div>
+
+      <footer style="background-color: #39c ;color:white;height:45px;" ng-class="{ show: chrome.getVisible() }" class="hide">
+        <p style="text-align:center;padding-top:5px;">
+    
+  Sharpview 3.0 ©2015-2016 </p>
+      </footer>
 </div>

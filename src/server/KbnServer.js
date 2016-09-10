@@ -19,6 +19,7 @@ module.exports = class KbnServer {
       require('./http'), // sets this.server
       require('./logging'),
       require('./status'),
+      require('./sharpview'),
 
       // find plugins and set this.plugins
       require('./plugins/scan'),
